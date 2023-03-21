@@ -3,6 +3,13 @@ package Main;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 
+ * @author Álvaro
+ * @version 5.2
+ *
+ */
+
 public class CuentaBancaria {
 	private List<Double> saldo;
 	private double credito;
@@ -16,6 +23,13 @@ public class CuentaBancaria {
 		tienePrestamo = false;
 	}
 
+	
+	/**
+	 * Esta función recibe un saldo y lo añade a tu cuenta.
+	 * Si tienes un préstamo este saldo no se suma, si no que se resta al préstamo hasta que sea perdonado.
+	 * @param cantidad Double
+	 */
+	
 	public void agregarSaldo(double cantidad) {
 		if (prestamo > 0) {
 			prestamo -= cantidad;
